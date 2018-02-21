@@ -1,0 +1,14 @@
+{
+  "name": "angular2-to-do",
+  "description": "",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/TuesdayHat/angular2ToDoList",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
