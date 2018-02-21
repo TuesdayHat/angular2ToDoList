@@ -2,10 +2,36 @@ import { Component } from '@angular/core';
 
 @Component({ //says "This Defines A New Component"
   selector: 'app-root',//corresponds to <app-root> in .html file
-  template: `<h1>My First Angular 2 App</h1>` //insert this where selector shows up
+  template: /*insert this where selector shows up*/`
+  <div class="container">
+    <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
+    <h3>For Epicodus {{currentFocus}}</h3>
+    <ul>
+       <li *ngFor="let currentTask of tasks">{{currentTask.description}}</li>
+     </ul>
+  </div>
+  `
 })
 
 export class AppComponent {
 //logic for the component's behavior
+  currentFocus: string = 'Angular Homework';
+  currentTime = new Date();
+  month: number = this.currentTime.getMonth() + 1;
+  day: number = this.currentTime.getDate();
+  year: number = this.currentTime.getFullYear();
 
+  tasks: Task[] = [
+    new Task('Finish weekend Angular homework for Epicodus course'),
+    new Task('Begin brainstorming possible JavaScript group projects'),
+    new Task('Add README file to last few Angular repos on GitHub')
+  ];
+}
+
+export class Task {
+  public done: boolean = false;
+  constructor(public description: string) { }
+  markDone(){
+    this.done=true;
+  }
 }
