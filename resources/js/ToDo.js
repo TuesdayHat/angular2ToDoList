@@ -1,4 +1,4 @@
-var Task = /** @class */ (function () {
+var Task = (function () {
     // public description: string;
     // public priority: string;
     // constructor(descriptionParameter:string, priorityParameter:string){
@@ -25,3 +25,4 @@ for (var _i = 0, tasks_1 = tasks; _i < tasks_1.length; _i++) {
     var task = tasks_1[_i];
     console.log(task);
 }
+//# sourceMappingURL=ToDo.js.map
